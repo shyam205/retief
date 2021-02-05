@@ -1,0 +1,752 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+.banner {
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 39, 41, 0.59);
+}
+
+.banner .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.banner .banner-text p {
+  font-style: italic;
+  font-size: 5vw;
+  color: white;
+  margin-top: 5vw;
+}
+
+.banner .banner-text a {
+  display: inline-block;
+  padding: 1vw 2vw;
+  background-color: black;
+  color: white;
+  font-size: 1vw;
+  margin-top: 5vw;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#popup {
+  width: 35%;
+  position: fixed;
+  top: calc(50% - 3vw);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 16;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.7s ease-in;
+  transition: 0.7s ease-in;
+  overflow: hidden;
+}
+
+#popup .image-section {
+  height: 40vh;
+  overflow: hidden;
+}
+
+#popup .text-section {
+  padding: 4vw;
+}
+
+#popup .image-section img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#popup h1 {
+  font-size: 2vw;
+  font-weight: 700;
+}
+
+#popup p {
+  font-size: 1.3vw;
+  line-height: 1.5;
+  margin-top: 1vw;
+}
+
+#popup a {
+  display: inline-block;
+  padding: 1.5vw 3vw;
+  background-color: black;
+  color: white;
+  margin: 2.5vw auto 0 auto;
+  font-size: 1vw;
+  font-weight: 700;
+}
+
+#popup span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1vw;
+  background-color: transparent;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+#popup.popupactive {
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+}
+
+.learn-more-button {
+  text-align: center;
+}
+
+.patient-login {
+  background-color: #1C1C1C;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 2.5vw;
+}
+
+.patient-login .patient-login-box {
+  height: 2.5vw;
+  width: 2.5vw;
+  background-color: #699cbb;
+}
+
+.patient-login .patient-login-text {
+  margin-right: 2vw;
+  font-size: 1.1vw;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  padding: 0 3vw 0 3vw;
+  top: 0;
+  z-index: 15;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .logo-section {
+  width: 20vw;
+  height: 10vw;
+  overflow: hidden;
+}
+
+.header .logo-section img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .nav ul li {
+  margin-left: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header .nav ul li a {
+  display: inline-block;
+  font-style: italic;
+  font-size: 1.5vw;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.header .nav ul .Schedule {
+  display: inline-block;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.header .nav ul .Schedule a {
+  color: #74a6c3;
+  padding: 1vw;
+  border: 2px solid #74a6c3;
+}
+
+.header .nav ul .Schedule a:hover {
+  border: 2px solid black;
+  background-color: #74a6c3;
+  color: black;
+}
+
+.banner-retief {
+  background-color: #F9F4F4;
+}
+
+.banner-retief .banner-retief-center-section {
+  width: calc(100% - 20vw);
+  margin-left: 10vw;
+  padding: 5vw 0 5vw 0;
+  text-align: center;
+}
+
+.banner-retief .banner-retief-center-section h1 {
+  font-size: 5vw;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.banner-retief .banner-retief-center-section p {
+  font-size: 1.1vw;
+  font-weight: 700;
+  margin-top: 4vw;
+  letter-spacing: 0.1vw;
+}
+
+.banner-retief .banner-retief-center-section span {
+  display: inline-block;
+  font-size: 1.2vw;
+  width: calc(100% - 47vw);
+  line-height: 2vw;
+  margin-top: 1vw;
+}
+
+.banner-retief .banner-retief-center-section .companys-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2vw;
+  overflow: hidden;
+}
+
+.banner-retief .banner-retief-center-section .companys-logo .companys-logo-box {
+  width: 25%;
+  height: 12vw;
+  padding-right: 2vw;
+}
+
+.banner-retief .banner-retief-center-section .companys-logo .companys-logo-box img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-retief .visiting-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 30vw);
+  margin-left: 15vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.banner-retief .visiting-section .visiting-section-image {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  background-image: url("../images/Online+consult.png");
+  background-size: cover;
+  width: 50%;
+  padding-right: 2vw;
+  overflow: hidden;
+}
+
+.banner-retief .visiting-section .visiting-section-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-retief .visiting-section .visiting-section-text {
+  width: 50%;
+  padding-left: 2vw;
+}
+
+.banner-retief .visiting-section .visiting-section-text h1 {
+  font-size: 4vw;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 3vw;
+  line-height: 1.2;
+}
+
+.banner-retief .visiting-section .visiting-section-text span {
+  display: inline-block;
+  font-size: 1.2vw;
+  font-weight: 400;
+  margin-top: 1.5vw;
+  line-height: 1.5;
+}
+
+.banner-retief .feature-section-banner {
+  margin-top: 8vw;
+  width: 100%;
+  height: 70%;
+  position: relative;
+}
+
+.banner-retief .feature-section-banner .feature-section-banner-image {
+  overflow: hidden;
+}
+
+.banner-retief .feature-section-banner .feature-section-banner-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-retief .feature-section-banner .feature-section-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.banner-retief .feature-section-banner .feature-section-banner-text p {
+  color: white;
+  font-size: 4vw;
+  font-style: italic;
+}
+
+.banner-retief .feature-card-section {
+  width: calc(100% - 30vw);
+  margin-left: 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 7vw;
+  margin-top: 7vw;
+}
+
+.banner-retief .feature-card-section .feature-card {
+  width: calc(100%/3);
+  padding-right: 2vw;
+  color: #526066;
+}
+
+.banner-retief .feature-card-section .feature-card .feature-card-image-section {
+  overflow: hidden;
+  height: 40%;
+}
+
+.banner-retief .feature-card-section .feature-card .feature-card-image-section img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.banner-retief .feature-card-section .feature-card .feature-card-text-section {
+  text-align: center;
+}
+
+.banner-retief .feature-card-section .feature-card .feature-card-text-section p {
+  font-size: 1.2vw;
+  font-weight: 400;
+  margin-top: 5vw;
+}
+
+.banner-retief .feature-card-section .feature-card .feature-card-text-section span {
+  display: inline-block;
+  font-size: 1.2vw;
+  margin-top: 1.1vw;
+  line-height: 1.5;
+}
+
+.banner-retief .feature-card-section .feature-card .feature-card-text-section a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 1.2vw 3.6vw;
+  margin-top: 2vw;
+  font-size: 1.2vw;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.banner-retief .our-clients {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-retief .our-clients::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 39, 41, 0.59);
+}
+
+.banner-retief .our-clients .our-clients-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-retief .our-clients .our-clients-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  color: white;
+  text-align: center;
+}
+
+.banner-retief .our-clients .our-clients-text p {
+  font-size: 4vw;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.banner-retief .our-clients .our-clients-text span {
+  display: inline-block;
+  font-size: 2vw;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 2.5vw;
+}
+
+.banner-retief h1 {
+  text-align: center;
+  color: #5D6066;
+  margin-top: 7vw;
+  font-size: 1.4vw;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner-retief .reviews {
+  width: calc(100% - 25vw);
+  margin: 5vw auto 0 12.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  padding-bottom: 5vw;
+}
+
+.banner-retief .reviews .reviews-section-box {
+  width: 50%;
+  background-color: #F9F4F4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1vw;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container {
+  padding: 1vw;
+  -webkit-box-shadow: 1px 2px 5px 2px #aaaaaa;
+          box-shadow: 1px 2px 5px 2px #aaaaaa;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .reviews-icon {
+  width: 2vw;
+  height: 2vw;
+  overflow: hidden;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .reviews-icon img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span {
+  display: inline-block;
+  font-size: 1.2vw;
+  letter-spacing: 0.1vw;
+  font-weight: 400;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span i {
+  color: #71A6C1;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span .star-rating {
+  display: contents;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .date {
+  display: inline-block;
+  color: #aba5a5;
+  font-size: 1.3vw;
+  font-weight: 600;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container p {
+  font-size: 1.3vw;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-top: 1vw;
+  height: 8vw;
+  overflow-y: scroll;
+}
+
+.banner-retief .recommended-products {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-retief .recommended-products::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 39, 41, 0.59);
+}
+
+.banner-retief .recommended-products .recommended-products-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-retief .recommended-products .recommended-products-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  color: white;
+  text-align: center;
+}
+
+.banner-retief .recommended-products .recommended-products-text p {
+  font-size: 4vw;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.banner-retief .recommended-products .recommended-products-text a {
+  display: inline-block;
+  font-size: 1vw;
+  color: white;
+  padding: 1vw 2vw;
+  font-weight: 400;
+  margin-top: 2.5vw;
+  background-color: black;
+  text-decoration: none;
+  -webkit-transition: 0.5s all linear;
+  transition: 0.5s all linear;
+}
+
+.banner-retief .recommended-products .recommended-products-text a:hover {
+  background-color: white;
+  color: black;
+}
+
+.banner-retief .buffrx-lab {
+  padding-bottom: 6vw;
+}
+
+.banner-retief .buffrx-lab .buffrx-lab-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% - 40vw);
+  margin-left: 20vw;
+  margin-top: 5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-image {
+  width: 30%;
+  padding: 2vw 2vw 0.5vw 2vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-text {
+  width: 70%;
+  padding: 2vw 0 0.5vw 2vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-text p {
+  font-size: 1.2vw;
+  letter-spacing: 0.1vw;
+  font-weight: 400;
+  margin-top: 3.5vw;
+}
+
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-text span {
+  display: inline-block;
+  font-size: 1.15vw;
+  margin-top: 1vw;
+  line-height: 1.3;
+  color: #526066;
+  font-weight: 400;
+}
+
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-text a {
+  color: black;
+  display: inline-block;
+  margin-top: 0.5vw;
+  font-size: 1.05vw;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.banner-retief .buffrx-lab .shop-all {
+  color: black;
+  padding: 1vw 2vw;
+  font-size: 1.05vw;
+  margin-top: 2vw;
+  font-weight: 400;
+  display: inline-block;
+  letter-spacing: 0.05vw;
+  border: 2px solid black;
+  text-decoration: none;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.banner-retief .buffrx-lab .shop-all:hover {
+  background-color: black;
+  color: white;
+}
+
+.banner-retief .buffrx-lab .shop-all span {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */
