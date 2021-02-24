@@ -7,6 +7,10 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+.navtoggle {
+  display: block !important;
+}
+
 .banner {
   overflow: hidden;
   width: 100%;
@@ -43,10 +47,10 @@ html {
 
 .banner .banner-text a {
   display: inline-block;
-  padding: 1vw 2vw;
+  padding: calc(max(1vw,1rem)) calc(max(2vw,2rem));
   background-color: black;
   color: white;
-  font-size: 1vw;
+  font-size: calc(max(1vw,0.8rem));
   margin-top: 5vw;
   font-weight: bold;
   text-decoration: none;
@@ -151,7 +155,6 @@ html {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  line-height: 2.5vw;
 }
 
 .patient-login .patient-login-box {
@@ -162,7 +165,11 @@ html {
 
 .patient-login .patient-login-text {
   margin-right: 2vw;
-  font-size: 1.1vw;
+  padding: 1vw;
+}
+
+.patient-login .patient-login-text p {
+  font-size: calc(max(1.1vw, 1rem));
 }
 
 .header {
@@ -201,6 +208,15 @@ html {
      object-fit: cover;
 }
 
+.header .logo-section #lable {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  display: none;
+}
+
 .header .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,7 +239,7 @@ html {
 .header .nav ul li a {
   display: inline-block;
   font-style: italic;
-  font-size: 1.5vw;
+  font-size: calc(max(1.5vw, 1rem));
   color: white;
   font-weight: 400;
   text-decoration: none;
@@ -249,6 +265,7 @@ html {
 
 .banner-retief {
   background-color: #F9F4F4;
+  padding-bottom: 30px;
 }
 
 .banner-retief .banner-retief-center-section {
@@ -259,13 +276,13 @@ html {
 }
 
 .banner-retief .banner-retief-center-section h1 {
-  font-size: 5vw;
+  font-size: calc(max(5vw,2.5rem));
   font-style: italic;
   font-weight: 500;
 }
 
 .banner-retief .banner-retief-center-section p {
-  font-size: 1.1vw;
+  font-size: calc(max(1.1vw,1rem));
   font-weight: 700;
   margin-top: 4vw;
   letter-spacing: 0.1vw;
@@ -273,9 +290,10 @@ html {
 
 .banner-retief .banner-retief-center-section span {
   display: inline-block;
-  font-size: 1.2vw;
-  width: calc(100% - 47vw);
-  line-height: 2vw;
+  max-width: 60vw;
+  width: calc((100% - 50vw));
+  font-size: calc(max(1.2vw,1.1rem));
+  line-height: 1.2;
   margin-top: 1vw;
 }
 
@@ -344,7 +362,7 @@ html {
 }
 
 .banner-retief .visiting-section .visiting-section-text h1 {
-  font-size: 4vw;
+  font-size: calc(max(4vw,2rem));
   font-style: italic;
   font-weight: 400;
   margin-top: 3vw;
@@ -354,6 +372,7 @@ html {
 .banner-retief .visiting-section .visiting-section-text span {
   display: inline-block;
   font-size: 1.2vw;
+  font-size: calc(max(1.2vw,0.7rem));
   font-weight: 400;
   margin-top: 1.5vw;
   line-height: 1.5;
@@ -395,8 +414,8 @@ html {
 }
 
 .banner-retief .feature-card-section {
-  width: calc(100% - 30vw);
-  margin-left: 15vw;
+  width: calc(100% - 200px);
+  margin-left: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,7 +432,7 @@ html {
 
 .banner-retief .feature-card-section .feature-card .feature-card-image-section {
   overflow: hidden;
-  height: 40%;
+  height: calc(max(20vw,200px));
 }
 
 .banner-retief .feature-card-section .feature-card .feature-card-image-section img {
@@ -432,14 +451,14 @@ html {
 }
 
 .banner-retief .feature-card-section .feature-card .feature-card-text-section p {
-  font-size: 1.2vw;
+  font-size: calc(max(1.2vw,1rem));
   font-weight: 400;
   margin-top: 5vw;
 }
 
 .banner-retief .feature-card-section .feature-card .feature-card-text-section span {
   display: inline-block;
-  font-size: 1.2vw;
+  font-size: calc(max(1.2vw,0.8rem));
   margin-top: 1.1vw;
   line-height: 1.5;
 }
@@ -448,9 +467,9 @@ html {
   text-decoration: none;
   color: black;
   border: 1px solid black;
-  padding: 1.2vw 3.6vw;
+  padding: calc(max(1.2vw,1rem)) calc(max(3.6vw,2rem));
   margin-top: 2vw;
-  font-size: 1.2vw;
+  font-size: calc(max(1.2vw,0.7rem));
   font-weight: 400;
   display: inline-block;
 }
@@ -494,13 +513,14 @@ html {
 
 .banner-retief .our-clients .our-clients-text p {
   font-size: 4vw;
+  font-size: calc(max(4vw,2rem));
   font-style: italic;
   font-weight: 400;
 }
 
 .banner-retief .our-clients .our-clients-text span {
   display: inline-block;
-  font-size: 2vw;
+  font-size: calc(max(2vw,1.5rem));
   font-style: italic;
   font-weight: 400;
   margin-top: 2.5vw;
@@ -510,14 +530,14 @@ html {
   text-align: center;
   color: #5D6066;
   margin-top: 7vw;
-  font-size: 1.4vw;
+  font-size: calc(max(1.4vw,1.3rem));
   font-weight: 400;
   font-style: italic;
 }
 
 .banner-retief .reviews {
-  width: calc(100% - 25vw);
-  margin: 5vw auto 0 12.5vw;
+  width: calc(100% - 200px);
+  margin: 5vw auto 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -569,13 +589,14 @@ html {
 
 .banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span {
   display: inline-block;
-  font-size: 1.2vw;
+  font-size: calc(max(1.2vw,0.9rem));
   letter-spacing: 0.1vw;
   font-weight: 400;
 }
 
 .banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span i {
   color: #71A6C1;
+  font-size: calc(max(1.7vw,0.8rem));
 }
 
 .banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span .star-rating {
@@ -585,17 +606,22 @@ html {
 .banner-retief .reviews .reviews-section-box .reviews-section-box-container .date {
   display: inline-block;
   color: #aba5a5;
-  font-size: 1.3vw;
+  margin-top: 0.2vw;
+  font-size: calc(max(1.3vw,0.9rem));
   font-weight: 600;
 }
 
 .banner-retief .reviews .reviews-section-box .reviews-section-box-container p {
-  font-size: 1.3vw;
+  font-size: calc(max(1.3vw,1rem));
   font-weight: 400;
   line-height: 1.3;
   margin-top: 1vw;
   height: 8vw;
   overflow-y: scroll;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container p::-webkit-scrollbar {
+  display: none;
 }
 
 .banner-retief .recommended-products {
@@ -636,16 +662,16 @@ html {
 }
 
 .banner-retief .recommended-products .recommended-products-text p {
-  font-size: 4vw;
+  font-size: calc(max(4vw,1.7rem));
   font-style: italic;
   font-weight: 400;
 }
 
 .banner-retief .recommended-products .recommended-products-text a {
   display: inline-block;
-  font-size: 1vw;
+  font-size: calc(max(1vw,0.8rem));
   color: white;
-  padding: 1vw 2vw;
+  padding: calc(max(1vw,0.9rem)) calc(max(2vw,1.4rem));
   font-weight: 400;
   margin-top: 2.5vw;
   background-color: black;
@@ -669,22 +695,29 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: calc(100% - 40vw);
-  margin-left: 20vw;
+  width: calc(max(100% - 200px));
+  margin-left: 100px;
   margin-top: 5vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
 }
 
-.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-image {
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-container-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-image {
   width: 30%;
-  padding: 2vw 2vw 0.5vw 2vw;
+  height: 20vw;
+  padding: calc(max(2vw,2rem)) 2vw 0.5vw 2vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-image img {
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-image img {
   height: 100%;
   width: 100%;
   -o-object-position: center;
@@ -695,39 +728,39 @@ html {
      object-fit: contain;
 }
 
-.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-text {
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-text {
   width: 70%;
-  padding: 2vw 0 0.5vw 2vw;
+  padding-top: calc(max(1vw,0.7rem));
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-text p {
-  font-size: 1.2vw;
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-text p {
+  font-size: calc(max(1rem,1.2vw));
   letter-spacing: 0.1vw;
   font-weight: 400;
   margin-top: 3.5vw;
 }
 
-.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-text span {
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-text span {
   display: inline-block;
-  font-size: 1.15vw;
+  font-size: calc(max(1.15vw,0.9rem));
   margin-top: 1vw;
   line-height: 1.3;
   color: #526066;
   font-weight: 400;
 }
 
-.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-text a {
+.banner-retief .buffrx-lab .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-text a {
   color: black;
   display: inline-block;
   margin-top: 0.5vw;
-  font-size: 1.05vw;
+  font-size: calc(max(0.9rem,1.05vw));
   font-weight: 400;
   text-decoration: none;
 }
 
-.banner-retief .buffrx-lab .shop-all {
+.banner-retief .shop-all {
   color: black;
   padding: 1vw 2vw;
   font-size: 1.05vw;
@@ -741,12 +774,195 @@ html {
   transition: 0.4s all;
 }
 
-.banner-retief .buffrx-lab .shop-all:hover {
+.banner-retief .shop-all:hover {
   background-color: black;
   color: white;
 }
 
-.banner-retief .buffrx-lab .shop-all span {
+.banner-retief .shop-all span {
   display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-retief-center-section span {
+    display: inline-block;
+    width: 450px !important;
+  }
+  #popup {
+    width: 50%;
+  }
+  #popup .image-section {
+    height: 11rem;
+  }
+  #popup .image-section img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #popup .text-section h1 {
+    font-size: 2rem;
+  }
+  #popup .text-section p {
+    font-size: 1rem;
+  }
+  #popup .text-section a {
+    font-size: 0.7rem;
+  }
+  .header {
+    display: block;
+    text-align: center;
+  }
+  .header .logo-section #lable {
+    display: block;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header .nav .nav ul {
+    display: block;
+  }
+  .header .nav .nav ul .Schedule {
+    margin-top: 10px;
+  }
+  .header ul {
+    display: block !important;
+    padding-bottom: 30px;
+  }
+  .header ul li {
+    margin-top: 15px !important;
+  }
+  .header ul li a {
+    margin: 0 auto 0 auto;
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #popup {
+    width: 80%;
+  }
+  #popup .image-section {
+    height: 10rem;
+  }
+  #popup .text-section span {
+    font-size: 20px;
+  }
+  #popup a {
+    padding: 0.8rem 2rem;
+  }
+  .logo-section {
+    width: 100px !important;
+    height: 80px !important;
+    padding-left: 10px !important;
+  }
+  .logo-section img {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
+  .patient-login-text {
+    padding: 20px !important;
+  }
+  .patient-login-box {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .banner-retief-center-section span {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .visiting-section {
+    display: block !important;
+  }
+  .visiting-section .visiting-section-image {
+    height: 400px;
+    width: 100% !important;
+    background-size: contain !important;
+  }
+  .visiting-section .visiting-section-text {
+    width: 100% !important;
+  }
+  .visiting-section .visiting-section-text h1 {
+    font-size: 2rem !important;
+  }
+  .visiting-section .visiting-section-text span {
+    font-size: 1rem !important;
+  }
+  .feature-card-section {
+    display: block !important;
+    width: calc(100% - 20px) !important;
+    margin-left: 10px !important;
+  }
+  .feature-card-section .feature-card {
+    width: 100% !important;
+    margin-top: 40px;
+  }
+  .feature-card-section .feature-card .feature-card-text-section p {
+    font-size: 1.5rem !important;
+  }
+  .feature-card-section .feature-card .feature-card-text-section span {
+    font-size: 1.2rem !important;
+  }
+  .feature-card-section .feature-card .feature-card-text-section a {
+    font-size: 1rem;
+  }
+  .reviews {
+    display: block !important;
+    width: calc(100% - 20px) !important;
+    margin-left: 10px !important;
+  }
+  .reviews .reviews-section-box {
+    width: 100% !important;
+  }
+  .companys-logo {
+    display: block !important;
+  }
+  .companys-logo .companys-logo-box {
+    height: 200px !important;
+    width: 200px !important;
+    margin-left: 50% !important;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .companys-logo .companys-logo-box img {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
+  .buffrx-lab-container {
+    width: calc(100% - 30px) !important;
+    margin-left: 15px !important;
+    text-align: center !important;
+  }
+  .buffrx-lab-container .buffrx-lab-container-box {
+    display: block !important;
+  }
+  .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-image {
+    width: 100% !important;
+    padding: 0 !important;
+    height: 200px !important;
+  }
+  .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-text {
+    width: 100% !important;
+  }
+  .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-text p {
+    font-size: 1.2rem !important;
+  }
+  .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-text span {
+    font-size: 1.3rem !important;
+    margin-top: 10px !important;
+  }
+  .buffrx-lab-container .buffrx-lab-container-box .buffrx-lab-text a {
+    font-size: 1.4rem !important;
+    margin-top: 1rem !important;
+  }
+  .feature-section-banner-text p {
+    font-size: 1.5rem !important;
+  }
+  .shop-all {
+    font-size: 1rem !important;
+    padding: 1rem 2rem !important;
+    margin-bottom: 5vw;
+  }
+  .shop-all span {
+    margin-top: 0.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

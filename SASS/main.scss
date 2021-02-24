@@ -1,5 +1,6 @@
 @import 'mixin';
 
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +8,10 @@
 html{
     -webkit-font-smoothing: antialiased;
 }
+   
+    .navtoggle{
+        display: block !important;
+    }
 .banner{
    overflow: hidden;
    width:100%;
@@ -36,10 +41,10 @@ html{
         }
             a{
                 display: inline-block;
-                padding: 1vw 2vw;
+                padding: calc(max(1vw,1rem)) calc(max(2vw,2rem));
                 background-color: black;
                 color:white;
-                font-size: 1vw;
+                font-size: calc(max(1vw,0.8rem));
                 margin-top: 5vw;
                 font-weight: bold;
                 text-decoration: none;
@@ -119,7 +124,6 @@ html{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    line-height: 2.5vw;
         .patient-login-box{
             height:2.5vw;
             width: 2.5vw;
@@ -127,7 +131,10 @@ html{
         }
         .patient-login-text{
             margin-right: 2vw;
-            font-size: 1.1vw;
+            padding:1vw;
+           p{
+               font-size: calc(max(1.1vw, 1rem));
+           }
         }
     
 }
@@ -148,6 +155,14 @@ html{
         overflow: hidden;  
                 img{
                     @include imageproperty;
+                }
+                #lable{
+                    position: absolute;
+                        top: 20px;
+                        right: 30px;
+                        color: white;
+                        font-size: 30px;
+                        display: none;
                 } 
         }
      
@@ -161,7 +176,7 @@ html{
                                 a{
                                     display: inline-block;
                                     font-style: italic;
-                                    font-size: 1.5vw;
+                                    font-size: calc(max(1.5vw, 1rem));
                                     color:white;
                                     font-weight: 400;
                                     text-decoration: none;
@@ -187,28 +202,29 @@ html{
 }
  .banner-retief{
       background-color: #F9F4F4;
-  
+      padding-bottom: 30px;
      .banner-retief-center-section{
       width:calc(100% - 20vw);
       margin-left:10vw;
       padding:5vw 0 5vw 0;
       text-align: center;
        h1{
-           font-size: 5vw;
+           font-size: calc(max(5vw,2.5rem));
            font-style: italic;
            font-weight: 500;
        }
        p{
-        font-size: 1.1vw;
+        font-size: calc(max(1.1vw,1rem));
         font-weight: 700;
         margin-top: 4vw;
         letter-spacing: 0.1vw;
        }
        span{
         display: inline-block;
-        font-size: 1.2vw;
-        width: calc(100% - 47vw);
-        line-height: 2vw;
+        max-width: 60vw;
+        width: calc((100% - 50vw));
+        font-size: calc(max(1.2vw,1.1rem));
+        line-height: 1.2;
         margin-top: 1vw;
        }
             .companys-logo{
@@ -247,7 +263,7 @@ html{
                width: 50%;
                padding-left: 2vw;
             h1{
-                font-size: 4vw;
+                font-size: calc(max(4vw,2rem));
                 font-style: italic;
                 font-weight: 400;
                 margin-top: 3vw;
@@ -256,6 +272,7 @@ html{
             span{
                 display: inline-block;
                 font-size: 1.2vw;
+                font-size: calc(max(1.2vw,0.7rem));
                 font-weight: 400;
                 margin-top: 1.5vw;
                 line-height: 1.5;
@@ -287,8 +304,8 @@ html{
        }
    }
    .feature-card-section{
-    width:calc(100% - 30vw);
-    margin-left: 15vw;
+    width: calc(100% - 200px);
+    margin-left: 100px;
     display: flex;
     overflow: hidden;
     padding-bottom: 7vw;
@@ -299,7 +316,7 @@ html{
          color: #526066;
         .feature-card-image-section{
             overflow: hidden;
-            height:40%;
+            height:calc(max(20vw,200px));
             img{
                 @include imageproperty;
                 object-fit: contain;
@@ -308,13 +325,13 @@ html{
         .feature-card-text-section{
             text-align: center;
             p{
-                font-size: 1.2vw;
+                font-size: calc(max(1.2vw,1rem));
                 font-weight: 400;
                 margin-top: 5vw;
             }
             span{
                 display: inline-block;
-                font-size: 1.2vw;
+                font-size: calc(max(1.2vw,0.8rem));
                 margin-top: 1.1vw;
                 line-height: 1.5;
             }
@@ -322,9 +339,9 @@ html{
                 text-decoration: none;
                 color: black;
                 border: 1px solid black;
-                padding: 1.2vw 3.6vw;
+                padding: calc(max(1.2vw,1rem)) calc(max(3.6vw,2rem));
                 margin-top: 2vw;
-                font-size: 1.2vw;
+                font-size: calc(max(1.2vw,0.7rem));
                 font-weight: 400;
                 display: inline-block;
             }
@@ -358,12 +375,13 @@ html{
               text-align: center;
               p{
                 font-size: 4vw;
+                font-size: calc(max(4vw,2rem));
                 font-style: italic;
                 font-weight: 400;
               }
               span{
                 display: inline-block;
-                font-size: 2vw;
+                font-size: calc(max(2vw,1.5rem));
                 font-style: italic;
                 font-weight: 400;
                 margin-top: 2.5vw;
@@ -374,13 +392,13 @@ html{
        text-align: center;
        color:#5D6066;
        margin-top: 7vw;
-       font-size: 1.4vw;
+       font-size: calc(max(1.4vw,1.3rem));
        font-weight: 400;
        font-style: italic;
    }
    .reviews{
-    width: calc(100% - 25vw);
-    margin: 5vw auto 0 12.5vw;
+    width: calc(100% - 200px);
+    margin: 5vw auto 0 100px;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -408,11 +426,12 @@ html{
             }
             .rating-text span{
                 display: inline-block;
-                font-size: 1.2vw;
+                font-size: calc(max(1.2vw,0.9rem));
                 letter-spacing: 0.1vw;
                 font-weight: 400;
                 i{ 
                         color: #71A6C1; 
+                        font-size: calc(max(1.7vw,0.8rem));
                 }
                 .star-rating{
                     display: contents;
@@ -422,17 +441,22 @@ html{
         .date{
             display: inline-block;
             color: #aba5a5;
-            font-size: 1.3vw;
+            margin-top: 0.2vw;
+            font-size: calc(max(1.3vw,0.9rem));
             font-weight: 600;
         }
         p{
-            font-size: 1.3vw;
+            font-size: calc(max(1.3vw,1rem));
             font-weight: 400;
             line-height: 1.3;
             margin-top: 1vw;
             height: 8vw;
             overflow-y: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
         }
+        
       }
     }
    }
@@ -462,15 +486,15 @@ html{
                   color: white;
                   text-align: center;
                   p{
-                    font-size: 4vw;
+                    font-size: calc(max(4vw,1.7rem));
                     font-style: italic;
                     font-weight: 400;
                   }
                   a{
                     display: inline-block;
-                    font-size: 1vw;
+                    font-size: calc(max(1vw,0.8rem));
                     color: white;
-                    padding:1vw 2vw;
+                    padding: calc(max(1vw,0.9rem)) calc(max(2vw,1.4rem));
                     font-weight: 400;
                     margin-top: 2.5vw;
                     background-color: black;
@@ -490,33 +514,37 @@ html{
         .buffrx-lab-container{
             display: flex;
             flex-wrap: wrap;
-            width:calc(100% - 40vw);
-            margin-left: 20vw;
+            width: calc(max(100% - 200px));
+            margin-left: 100px;
             margin-top: 5vw;
             box-sizing: border-box;
             overflow: hidden;
-            .buffrx-lab-image{
-                width: 30%;
-                padding: 2vw 2vw 0.5vw 2vw;
-                box-sizing: border-box;
-                img{
+            .buffrx-lab-container-box{
+                display: flex;
+                .buffrx-lab-image{
+                    width: 30%;
+                    height:20vw;
+                    padding: calc(max(2vw,2rem)) 2vw 0.5vw 2vw;
+                    box-sizing: border-box;
+                    img{
                         @include imageproperty;
                         object-fit: contain;
                 }
             }
                 .buffrx-lab-text{
                     width: 70%;
-                    padding: 2vw 0 0.5vw 2vw;
+                    // padding: 2vw 0 0.5vw 2vw;
+                    padding-top: calc(max(1vw,0.7rem));
                     box-sizing: border-box;
                     p{
-                        font-size: 1.2vw;
+                        font-size: calc(max(1rem,1.2vw));
                         letter-spacing: 0.1vw;
                         font-weight: 400;
                         margin-top:3.5vw;
                     }
                     span{
                         display: inline-block;
-                        font-size: 1.15vw;
+                        font-size: calc(max(1.15vw,0.9rem));
                         margin-top: 1vw;
                         line-height: 1.3;
                         color: #526066;
@@ -526,30 +554,228 @@ html{
                         color: black;
                         display: inline-block;
                         margin-top: 0.5vw;
-                        font-size: 1.05vw;
+                        font-size: calc(max(0.9rem,1.05vw));
                         font-weight: 400;
                         text-decoration: none;
                     }
               }
             }
-             .shop-all{
-                color: black;
-                padding: 1vw 2vw;
-                font-size: 1.05vw;
-                margin-top: 2vw;
-                font-weight: 400;
-                display: inline-block;
-                letter-spacing: 0.05vw;
-                border:2px solid black;
-                text-decoration: none;
-                transition: 0.4s all;
-                &:hover{
-                    background-color: black;
-                    color: white;
+            
+        }
+        
+    }
+    .shop-all{
+        color: black;
+        padding: 1vw 2vw;
+        font-size: 1.05vw;
+        margin-top: 2vw;
+        font-weight: 400;
+        display: inline-block;
+        letter-spacing: 0.05vw;
+        border:2px solid black;
+        text-decoration: none;
+        transition: 0.4s all;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+       span{
+           display: block;
+       }
+    }
+}
+
+@media only screen and(max-width:768px){
+    .banner-retief-center-section{
+        span{
+            display: inline-block;
+            width: 450px !important;
+        }
+    }
+    #popup{
+       width:50%;
+       .image-section{
+           height:11rem;
+           img{
+               object-fit: contain;
+           }
+       }
+       .text-section{
+           h1{
+              font-size: 2rem;
+           }
+           p{
+               font-size: 1rem;
+           }
+           a{
+               font-size: 0.7rem;
+           }
+       }
+    }
+    .header{
+        display: block;
+        text-align: center;
+         .logo-section{
+            #lable{
+                display: block;
+            }
+         }
+        .nav{
+          display: none;
+            .nav ul{
+                display: block;
+                
+                .Schedule{
+                    margin-top: 10px;
                 }
-               span{
-                   display: block;
-               }
+            }
+        }
+        ul{
+            display: block !important;
+            padding-bottom: 30px;
+            li{
+                margin-top: 15px !important;
+                a{
+                    margin:0 auto 0 auto;
+                    font-size: 20px !important;
+                }
+            }
+        }
+        
+    }
+}
+@media only screen and(max-width:480px){
+    #popup{
+        width:80%;
+        .image-section{
+            height:10rem;
+        }
+        .text-section{
+            span{
+                font-size: 20px;
+            }
+        }
+        a{
+            padding: 0.8rem 2rem;
+        }
+    }
+    .logo-section{
+        width: 100px !important;
+        height: 80px !important;
+        padding-left: 10px !important;
+        img{
+            object-fit: contain !important;
+        }
+    }
+    .patient-login-text{
+        padding: 20px !important;
+    }
+    .patient-login-box{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .banner-retief-center-section{
+        span{
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+    .visiting-section{
+        display: block !important;
+            .visiting-section-image{
+                height:400px;
+                width:100% !important;
+                   background-size: contain !important;
+            }
+            .visiting-section-text{
+                width:100% !important;
+                h1{
+                    font-size: 2rem !important;
+                }
+                span{
+                    font-size: 1rem !important;
+                }
             }
     }
+    .feature-card-section{
+        display: block !important;
+    width: calc(100% - 20px) !important;
+    margin-left: 10px !important;
+            .feature-card{
+                width: 100% !important;
+                margin-top: 40px;
+                   .feature-card-text-section{
+                       p{
+                           font-size: 1.5rem !important;
+                       }
+                       span{
+                        font-size: 1.2rem !important;
+                       }
+                       a{
+                           font-size: 1rem;
+                       }
+                   }
+            }
+    }
+    .reviews{
+        display: block !important;
+        width: calc(100% - 20px) !important;
+        margin-left: 10px !important;
+           .reviews-section-box{
+               width:100% !important
+           }
+    }
+    .companys-logo{
+       display: block !important;
+        .companys-logo-box{
+            height:200px !important;
+            width: 200px !important;
+            margin-left: 50% !important;
+            transform: translateX(-50%);
+            img{
+                object-fit: contain !important;
+            }
+        }
+    }
+    
+     .buffrx-lab-container{
+        width: calc(100% - 30px) !important;
+        margin-left: 15px !important;
+        text-align: center !important;
+        .buffrx-lab-container-box{
+            display: block !important;
+            .buffrx-lab-image{
+                width: 100% !important;
+                padding: 0 !important;
+                height: 200px !important;
+            }
+            .buffrx-lab-text{
+                width: 100% !important;
+                p{
+                    font-size: 1.2rem !important;
+                }
+                span{
+                    font-size: 1.3rem !important;
+                    margin-top: 10px !important;
+                }
+                a{
+                    font-size: 1.4rem !important;
+                    margin-top: 1rem !important;
+                }
+            }
+        }
+     }
+     .feature-section-banner-text{
+         p{
+             font-size: 1.5rem !important;
+         }
+     }
+      .shop-all{
+        font-size: 1rem !important;
+        padding: 1rem 2rem !important;
+        margin-bottom: 5vw;
+          span{
+              margin-top: 0.5rem;
+          }
+      }  
 }
