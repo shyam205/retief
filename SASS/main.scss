@@ -722,7 +722,19 @@ html{
         width: calc(100% - 20px) !important;
         margin-left: 10px !important;
            .reviews-section-box{
-               width:100% !important
+               padding: 1rem;
+               width:100% !important;
+               .reviews-section-box-container{
+                   padding: 1rem !important;
+                   .reviews-icon{
+                       height:20px !important;
+                       width: 20px !important;
+                   }
+               }
+               margin-top: 2rem !important;
+               p{
+                   height: 8rem !important;
+               }
            }
     }
     .companys-logo{

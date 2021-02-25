@@ -910,7 +910,19 @@ html {
     margin-left: 10px !important;
   }
   .reviews .reviews-section-box {
+    padding: 1rem;
     width: 100% !important;
+    margin-top: 2rem !important;
+  }
+  .reviews .reviews-section-box .reviews-section-box-container {
+    padding: 1rem !important;
+  }
+  .reviews .reviews-section-box .reviews-section-box-container .reviews-icon {
+    height: 20px !important;
+    width: 20px !important;
+  }
+  .reviews .reviews-section-box p {
+    height: 8rem !important;
   }
   .companys-logo {
     display: block !important;
