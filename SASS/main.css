@@ -594,6 +594,17 @@ html {
   font-weight: 400;
 }
 
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span .star-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span img {
+  height: 2vw;
+  width: 2vw;
+}
+
 .banner-retief .reviews .reviews-section-box .reviews-section-box-container .rating .rating-text span i {
   color: #71A6C1;
   font-size: calc(max(1.7vw,0.8rem));
@@ -975,6 +986,10 @@ html {
   }
   .shop-all span {
     margin-top: 0.5rem;
+  }
+  .star-images img {
+    height: 1rem !important;
+    width: 1rem !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

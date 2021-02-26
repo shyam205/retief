@@ -429,6 +429,14 @@ html{
                 font-size: calc(max(1.2vw,0.9rem));
                 letter-spacing: 0.1vw;
                 font-weight: 400;
+                .star-images{
+                    display: flex;
+                   
+                }
+                img{
+                    height:2vw;
+                    width:2vw;
+                }
                 i{ 
                         color: #71A6C1; 
                         font-size: calc(max(1.7vw,0.8rem));
@@ -789,5 +797,9 @@ html{
           span{
               margin-top: 0.5rem;
           }
-      }  
+      } 
+      .star-images img{
+          height:1rem !important;
+          width:1rem !important;
+      } 
 }
