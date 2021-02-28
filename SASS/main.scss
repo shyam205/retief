@@ -815,20 +815,32 @@ html{
           width:1rem !important;
       } 
      .feature-section-banner-image{
-         height:10rem;
+         height:10rem !important;
      }
      .our-clients-image{
-         height:10rem;
+         height:10rem !important;
      }
      .our-clients-text{
         p{
-            font-size: 1.2rem;
+            font-size: 1.2rem !important;
         }
         span{
-            font-size: 1rem;
+            font-size: 1rem !important;
         }
      }
      .our-clients{
-         margin-top: 3rem;
+         margin-top: 3rem !important;
+     }
+     .recommended-products-image{
+         height:10rem !important;
+     }
+     .recommended-products-text{
+         p{
+             font-size: 1.5rem !important;
+         }
+         a{
+             font-size: 0.7rem !important;
+             margin-top: 1rem !important;
+         }
      }
 }
