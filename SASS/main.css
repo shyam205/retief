@@ -898,6 +898,7 @@ html {
     height: 400px;
     width: 100% !important;
     background-size: contain !important;
+    background-repeat: no-repeat;
   }
   .visiting-section .visiting-section-text {
     width: 100% !important;
@@ -1001,6 +1002,21 @@ html {
   .star-images img {
     height: 1rem !important;
     width: 1rem !important;
+  }
+  .feature-section-banner-image {
+    height: 10rem;
+  }
+  .our-clients-image {
+    height: 10rem;
+  }
+  .our-clients-text p {
+    font-size: 1.2rem;
+  }
+  .our-clients-text span {
+    font-size: 1rem;
+  }
+  .our-clients {
+    margin-top: 3rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
